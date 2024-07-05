@@ -10,5 +10,4 @@ const myModule = (() => {
   return exported;
 })();
 
-console.log("@@@@@@", myModule);
 console.log(myModule.privateFoo, myModule.privateBar);
