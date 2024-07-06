@@ -1,13 +1,16 @@
 const myModule = (() => {
   const privateFoo = () => {};
-  const privateBar = [];
+  const privateBar = () => {};
 
-  const exported = {
-    publicFoo: () => {},
-    publicBar: () => {},
+  const publicFoo = () => {};
+  const publicBar = () => {
+    console.log("Test Passed");
   };
 
-  return exported;
+  return {
+    publicFoo,
+    publicBar,
+  };
 })();
 
-console.log(myModule.privateFoo, myModule.privateBar);
+console.log(myModule.publicBar());
